@@ -1,0 +1,76 @@
+.payment-card {
+  padding: 24px !important;
+  background: linear-gradient(135deg, rgba(30, 30, 50, 0.9), rgba(15, 15, 30, 0.9)) !important;
+  min-width: 280px;
+}
+
+.payment-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.payment-card-chip {
+  width: 36px;
+  height: 26px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #d4a457, #c4943f);
+  position: relative;
+}
+
+.payment-card-chip::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.payment-card-type {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.payment-card-number {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.payment-card-bottom {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.payment-card-bottom label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-card-bottom p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.payment-delete {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  padding: 6px;
+  display: flex;
+  transition: color var(--transition-fast);
+}
+
+.payment-delete:hover {
+  color: var(--error);
+}

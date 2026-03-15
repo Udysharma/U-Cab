@@ -1,0 +1,200 @@
+.tracking-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Status Progress */
+.status-progress {
+  margin-bottom: 24px;
+  padding: 24px !important;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all var(--transition-normal);
+}
+
+.progress-step.active .step-dot {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: #000;
+  box-shadow: var(--shadow-glow);
+}
+
+.progress-step.cancelled .step-dot {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.step-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.progress-step.active .step-label {
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.progress-bar {
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+
+/* Layout */
+.tracking-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Map */
+.tracking-map {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.map-placeholder {
+  height: 400px;
+  background: linear-gradient(145deg, #0d1117, #161b22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.map-route {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.map-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 80px;
+}
+
+.map-pin {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.map-point span:last-child {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.map-line {
+  flex: 1;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  position: relative;
+  margin: 0 16px;
+}
+
+.map-car {
+  position: absolute;
+  top: -14px;
+  font-size: 1.6rem;
+  transition: left 1.5s ease;
+  transform: translateX(-50%);
+}
+
+/* Sidebar */
+.tracking-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fare-summary h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.fare-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fare-row span:last-child {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fare-row.discount span:last-child {
+  color: var(--success);
+}
+
+.fare-row.total {
+  border-bottom: none;
+  padding-top: 12px;
+  font-size: 1rem;
+}
+
+.fare-row.total span {
+  font-weight: 700;
+  color: var(--accent-primary) !important;
+}
+
+.tracking-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .tracking-layout {
+    grid-template-columns: 1fr;
+  }
+}

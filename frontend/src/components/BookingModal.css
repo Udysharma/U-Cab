@@ -1,0 +1,125 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  padding: 32px !important;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  display: flex;
+  transition: color var(--transition-fast);
+}
+
+.modal-close:hover {
+  color: var(--text-primary);
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.modal-route {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--bg-glass);
+  border-radius: var(--radius-md);
+}
+
+.route-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.route-point label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.route-point p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.route-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pickup-dot {
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+.dropoff-dot {
+  background: var(--error);
+  box-shadow: 0 0 8px var(--error);
+}
+
+.route-line {
+  width: 2px;
+  height: 20px;
+  background: var(--border-light);
+  margin-left: 5px;
+  margin: 4px 0 4px 5px;
+}
+
+.modal-details {
+  margin-bottom: 24px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.detail-row.discount .detail-value {
+  color: var(--success);
+}
+
+.detail-row.total {
+  border-bottom: none;
+  font-size: 1.1rem;
+  padding-top: 14px;
+}
+
+.detail-row.total span,
+.detail-row.total .detail-value {
+  font-weight: 700;
+  color: var(--accent-primary);
+}

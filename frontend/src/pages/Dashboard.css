@@ -1,0 +1,99 @@
+.dashboard-greeting {
+  margin-bottom: 32px;
+}
+
+.dashboard-greeting h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dashboard-greeting p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.booking-panel {
+  padding: 28px !important;
+}
+
+.panel-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.panel-subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 20px 0 14px;
+  color: var(--text-secondary);
+}
+
+/* Location Inputs */
+.location-inputs {
+  position: relative;
+}
+
+.location-input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.location-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.location-connector {
+  width: 2px;
+  height: 16px;
+  background: var(--border-light);
+  margin-left: 5px;
+}
+
+/* Cab type list */
+.cab-type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Drivers panel */
+.drivers-panel {
+  position: sticky;
+  top: 90px;
+}
+
+.drivers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .drivers-panel {
+    position: static;
+  }
+
+  .drivers-list {
+    max-height: 400px;
+  }
+}
