@@ -27,9 +27,9 @@ async function getRideStatus(rideId) {
   };
 }
 
-/**
- * Update ride status through its lifecycle
- */
+
+ 
+ 
 async function updateRideStatus(rideId, newStatus) {
   const ride = await Ride.findById(rideId);
   if (!ride) throw new Error('Ride not found');
